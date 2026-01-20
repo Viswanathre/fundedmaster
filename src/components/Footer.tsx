@@ -40,20 +40,18 @@ export function Footer() {
                     {/* Company Links */}
                     <div className="flex flex-col gap-4">
                         <h4 className="text-white font-semibold text-base mb-2">Company</h4>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Programs</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Pricing</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Trading Rules</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">FAQs</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Affiliates</Link>
+                        <Link href="/programs" className="text-gray-400 hover:text-primary transition-colors">Programs</Link>
+                        <Link href="/pricing" className="text-gray-400 hover:text-primary transition-colors">Pricing</Link>
+                        <Link href="/trading-rules" className="text-gray-400 hover:text-primary transition-colors">Trading Rules</Link>
+                        <Link href="/faq" className="text-gray-400 hover:text-primary transition-colors">FAQs</Link>
+                        <Link href="/affiliates" className="text-gray-400 hover:text-primary transition-colors">Affiliates</Link>
                     </div>
 
                     {/* Legal Links */}
                     <div className="flex flex-col gap-4">
                         <h4 className="text-white font-semibold text-base mb-2">Legal</h4>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Return & Refund Policy</Link>
-                        <Link href="#" className="text-gray-400 hover:text-primary transition-colors">Shipping Policy</Link>
+                        <Link href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-and-conditions" className="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</Link>
                     </div>
 
                     {/* Social Links */}
@@ -85,10 +83,10 @@ export function Footer() {
 
                 {/* Copyright Row */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs mb-12">
-                    <p>© 2025 Funded Master Pvt.Ltd. All rights reserved.</p>
+                    <p>© 2025 Funded Master . All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="#" className="hover:text-primary transition-colors">Terms & Conditions</Link>
-                        <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-and-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+                        <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                     </div>
                 </div>
 

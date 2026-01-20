@@ -35,6 +35,12 @@ export function Programs() {
         }
     };
 
+    const drawdownRules: Record<TradingPath, { daily: string, max: string }> = {
+        'Instant': { daily: '3%', max: '7%' },
+        '1-Step': { daily: '4%', max: '9%' },
+        '2-Step': { daily: '5%', max: '10%' }
+    };
+
     return (
         <section className="py-20 bg-background">
             <div className="container mx-auto px-6">
@@ -103,8 +109,8 @@ export function Programs() {
                                 </p>
 
                                 <div className="space-y-4">
-                                    <Row label="Max Daily Drawdown" value="2%" />
-                                    <Row label="Max Overall Drawdown" value="10%" tooltip />
+                                    <Row label="Max Daily Drawdown" value={drawdownRules[path].daily} />
+                                    <Row label="Max Overall Drawdown" value={drawdownRules[path].max} tooltip />
                                     <Row label="Minimum Profitable Days" value="3 Days" tooltip />
                                     <Row label="Sim Trading Leverage" value="30:1" />
                                 </div>
