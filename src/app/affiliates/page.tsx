@@ -27,12 +27,16 @@ export default function AffiliatesPage() {
                             Earn up to <span className="text-white font-bold">15% commission</span> for every trader you introduce.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button size="lg" className="px-10 py-6 text-lg">
-                                Become a Partner
-                            </Button>
-                            <Button variant="outline" size="lg" className="px-10 py-6 text-lg">
-                                Member Login
-                            </Button>
+                            <a href="https://app.funded-master.com/" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" className="px-10 py-6 text-lg">
+                                    Become a Partner
+                                </Button>
+                            </a>
+                            <a href="https://app.funded-master.com/" target="_blank" rel="noopener noreferrer">
+                                <Button variant="outline" size="lg" className="px-10 py-6 text-lg">
+                                    Member Login
+                                </Button>
+                            </a>
                         </div>
                     </ScrollReveal>
                 </div>
@@ -169,9 +173,11 @@ export default function AffiliatesPage() {
                             <p className="text-gray-400 text-lg mb-10">
                                 Join hundreds of successful partners promoting Funded Master today.
                             </p>
-                            <Button size="lg" className="px-12 py-6 text-lg shadow-[0_0_30px_rgba(0,213,99,0.3)]">
-                                Join Program Now <ArrowRight className="ml-2" />
-                            </Button>
+                            <a href="https://app.funded-master.com/" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" className="px-12 py-6 text-lg shadow-[0_0_30px_rgba(0,213,99,0.3)]">
+                                    Join Program Now <ArrowRight className="ml-2" />
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>
