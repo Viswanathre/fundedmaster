@@ -23,12 +23,7 @@ export function Navbar() {
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8 text-gray-400 text-sm font-medium">
-                    <Link
-                        href="/programs"
-                        className={`transition-colors ${pathname === '/programs' ? 'text-primary border-b border-primary pb-0.5' : 'hover:text-primary'}`}
-                    >
-                        Programs
-                    </Link>
+
                     <Link
                         href="/pricing"
                         className={`transition-colors ${pathname === '/pricing' ? 'text-primary border-b border-primary pb-0.5' : 'hover:text-primary'}`}
@@ -55,11 +50,12 @@ export function Navbar() {
                     </Link>
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex items-center gap-4">
-                    <Button variant="primary" size="sm" className="font-semibold">
-                        Log in <span className="ml-2">👤</span>
-                    </Button>
+                    <a href="https://app.funded-master.com/" target="_blank" rel="noopener noreferrer">
+                        <Button variant="primary" size="sm" className="font-semibold">
+                            Log in
+                        </Button>
+                    </a>
                 </div>
             </div>
         </nav>
