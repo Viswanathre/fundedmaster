@@ -42,10 +42,12 @@ export function Hero() {
 
                     {/* CTA Button */}
                     <div className="mb-12">
-                        <Button size="lg" className="text-lg px-12 group">
-                            Get Funded
-                            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                        <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" className="text-lg px-12 group">
+                                Get Funded
+                                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                            </Button>
+                        </a>
                     </div>
 
 

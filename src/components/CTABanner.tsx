@@ -16,12 +16,12 @@ export function CTABanner() {
                         </h2>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button className="px-8 py-4 text-base font-semibold bg-primary hover:bg-primary-hover text-primary-foreground rounded-full min-w-[160px]">
-                                Get Funded
-                            </Button>
-                            <Button variant="outline" className="px-8 py-4 text-base font-semibold rounded-full min-w-[160px] border-white/10 hover:bg-white/5">
-                                Try Demo
-                            </Button>
+                            <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer">
+                                <Button className="px-8 py-4 text-base font-semibold bg-primary hover:bg-primary-hover text-primary-foreground rounded-full min-w-[160px]">
+                                    Get Funded
+                                </Button>
+                            </a>
+
                         </div>
                     </div>
                 </div>

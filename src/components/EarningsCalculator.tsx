@@ -126,9 +126,11 @@ export function EarningsCalculator() {
                 </div>
 
                 <div className="flex justify-center mt-20">
-                    <Button className="px-16 py-6 text-xl font-bold rounded-full shadow-[0_0_30px_rgba(0,213,99,0.3)] hover:shadow-[0_0_50px_rgba(0,213,99,0.5)] transition-all duration-300 hover:scale-105">
-                        Get Funded
-                    </Button>
+                    <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer">
+                        <Button className="px-16 py-6 text-xl font-bold rounded-full shadow-[0_0_30px_rgba(0,213,99,0.3)] hover:shadow-[0_0_50px_rgba(0,213,99,0.5)] transition-all duration-300 hover:scale-105">
+                            Get Funded
+                        </Button>
+                    </a>
                 </div>
 
             </div>

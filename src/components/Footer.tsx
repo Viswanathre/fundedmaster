@@ -40,7 +40,7 @@ export function Footer() {
                     {/* Company Links */}
                     <div className="flex flex-col gap-4">
                         <h4 className="text-white font-semibold text-base mb-2">Company</h4>
-                        <Link href="/programs" className="text-gray-400 hover:text-primary transition-colors">Programs</Link>
+
                         <Link href="/pricing" className="text-gray-400 hover:text-primary transition-colors">Pricing</Link>
                         <Link href="/trading-rules" className="text-gray-400 hover:text-primary transition-colors">Trading Rules</Link>
                         <Link href="/faq" className="text-gray-400 hover:text-primary transition-colors">FAQs</Link>

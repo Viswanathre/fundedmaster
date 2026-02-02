@@ -230,36 +230,36 @@ export function Programs() {
                         </div>
 
                         {/* Verification Card - Hide for Instant paths */}
-                        {!((productTier === 'Prime' && primePath === 'INSTANT') || (productTier === 'Lite' && litePath === 'Instant')) && (
-                            <div className="bg-card rounded-3xl p-8 border border-white/5 relative overflow-hidden">
-                                <div className="relative z-10">
-                                    <h3 className="text-xl font-medium text-white mb-4">
-                                        1. VERIFICATION {((productTier === 'Lite' && litePath === '2-Step') || (productTier === 'Prime' && primePath === '2-Step')) && '- PHASE 1'}
-                                    </h3>
-                                    <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-2xl">
-                                        Choose a simulated account size and try to reach the minimum simulated gains target.
-                                        Trade all available instruments. Subject to certain rules and objectives, your trading style is completely up to you!
-                                    </p>
+                        <div className="bg-card rounded-3xl p-8 border border-white/5 relative overflow-hidden">
+                            <div className="relative z-10">
+                                <h3 className="text-xl font-medium text-white mb-4">
+                                    {((productTier === 'Prime' && primePath === 'INSTANT') || (productTier === 'Lite' && litePath === 'Instant'))
+                                        ? 'TRADING RULES'
+                                        : '1. VERIFICATION'} {((productTier === 'Lite' && litePath === '2-Step') || (productTier === 'Prime' && primePath === '2-Step')) && '- PHASE 1'}
+                                </h3>
+                                <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-2xl">
+                                    Choose a simulated account size and try to reach the minimum simulated gains target.
+                                    Trade all available instruments. Subject to certain rules and objectives, your trading style is completely up to you!
+                                </p>
 
-                                    <div className="space-y-4">
-                                        {/* Profit Target */}
-                                        <Row
-                                            label="Profit Target"
-                                            value={
-                                                productTier === 'Prime'
-                                                    ? (primePath === 'INSTANT' ? 'None' : '9%')
-                                                    : (litePath === 'Instant' ? 'None' : litePath === '1-Step' ? '8%' : '8%')
-                                            }
-                                            tooltip
-                                        />
-                                        <Row label="Max Daily Drawdown" value={getCurrentDrawdown().daily} />
-                                        <Row label="Max Overall Drawdown" value={getCurrentDrawdown().max} tooltip />
-                                        <Row label="Minimum Profitable Days" value="3 Days" tooltip />
-                                        <Row label="Sim Trading Leverage" value="30:1" />
-                                    </div>
+                                <div className="space-y-4">
+                                    {/* Profit Target */}
+                                    <Row
+                                        label="Profit Target"
+                                        value={
+                                            productTier === 'Prime'
+                                                ? (primePath === 'INSTANT' ? 'None' : '9%')
+                                                : (litePath === 'Instant' ? 'None' : litePath === '1-Step' ? '8%' : '8%')
+                                        }
+                                        tooltip
+                                    />
+                                    <Row label="Max Daily Drawdown" value={getCurrentDrawdown().daily} />
+                                    <Row label="Max Overall Drawdown" value={getCurrentDrawdown().max} tooltip />
+                                    <Row label="Minimum Profitable Days" value="3 Days" tooltip />
+                                    <Row label="Sim Trading Leverage" value="30:1" />
                                 </div>
                             </div>
-                        )}
+                        </div>
 
                         {/* Phase 2 Card - Show for Lite 2-Step AND Prime 2-Step */}
                         {((productTier === 'Lite' && litePath === '2-Step') || (productTier === 'Prime' && primePath === '2-Step')) && (
@@ -304,7 +304,7 @@ export function Programs() {
                             </div>
                             <div className="mt-4 mb-2 text-sm text-gray-400 tracking-wider">START NOW AT ONLY</div>
                             <div className="text-6xl font-bold text-white mb-6">${getCurrentPrice()}</div>
-                            <a href="https://app.funded-master.com/" target="_blank" rel="noopener noreferrer" className="w-full">
+                            <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer" className="w-full">
                                 <Button className="w-full text-lg py-6 bg-primary hover:bg-primary-hover text-primary-foreground font-bold mb-2">
                                     Get Funded
                                 </Button>
@@ -312,20 +312,22 @@ export function Programs() {
                         </div>
 
                         {/* Live Trader Card */}
-                        <div className="bg-card rounded-3xl p-8 border border-white/5 relative overflow-hidden flex-1">
-                            <h3 className="text-xl font-medium text-white mb-4">2. LIVE SIMULATED TRADER</h3>
-                            <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                                You can now start trading on a simulated basis in the EmpireTrading program without simulated gain targets.
-                            </p>
+                        {!((productTier === 'Prime' && primePath === 'INSTANT') || (productTier === 'Lite' && litePath === 'Instant')) && (
+                            <div className="bg-card rounded-3xl p-8 border border-white/5 relative overflow-hidden flex-1">
+                                <h3 className="text-xl font-medium text-white mb-4">2. LIVE SIMULATED TRADER</h3>
+                                <p className="text-gray-400 text-sm mb-8 leading-relaxed">
+                                    You can now start trading on a simulated basis in the EmpireTrading program without simulated gain targets.
+                                </p>
 
-                            <div className="space-y-4">
-                                <Row label="Payout Share" value={<span className="bg-primary/20 text-primary px-2 py-0.5 rounded text-sm font-bold">90%</span>} tooltip />
-                                <Row label="Max Daily Drawdown" value="4%" />
-                                <Row label="Max Overall Drawdown" value="7%" tooltip />
-                                <Row label="Payout Frequency" value="14 days" />
-                                <Row label="Trading Period" value="Unlimited" />
+                                <div className="space-y-4">
+                                    <Row label="Payout Share" value={<span className="bg-primary/20 text-primary px-2 py-0.5 rounded text-sm font-bold">90%</span>} tooltip />
+                                    <Row label="Max Daily Drawdown" value="4%" />
+                                    <Row label="Max Overall Drawdown" value="7%" tooltip />
+                                    <Row label="Payout Frequency" value="14 days" />
+                                    <Row label="Trading Period" value="Unlimited" />
+                                </div>
                             </div>
-                        </div>
+                        )}
 
                     </div>
 

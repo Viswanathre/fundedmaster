@@ -26,9 +26,11 @@ export function HowItWorks() {
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                 Choose the evaluation based on your preference to become an Empire Trader.
                             </p>
-                            <Button className="px-8 bg-primary hover:bg-primary-hover text-black font-semibold rounded-full">
-                                Get Funded
-                            </Button>
+                            <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer">
+                                <Button className="px-8 bg-primary hover:bg-primary-hover text-black font-semibold rounded-full">
+                                    Get Funded
+                                </Button>
+                            </a>
                         </div>
 
                         {/* Right Graphic - 3D Plus Icon */}
