@@ -82,7 +82,7 @@ export function Navbar() {
 
                         <div className="flex flex-col gap-3 mt-8">
                             <a
-                                href="https://app.funded-master.com/checkoutpage"
+                                href="https://app.funded-master.com/login"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -91,7 +91,7 @@ export function Navbar() {
                                 </button>
                             </a>
                             <a
-                                href="https://dashboard.sharkfunded.com/checkoutpage"
+                                href="https://app.funded-master.com/checkoutpage"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
