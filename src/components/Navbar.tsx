@@ -64,25 +64,43 @@ export function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="md:hidden fixed inset-0 top-20 border-t border-white/5 z-50 p-6 flex flex-col gap-6" style={{ backgroundColor: '#000000' }}>
-                    <div className="flex flex-col gap-4">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={`text-lg font-medium py-2 border-b border-white/5 ${pathname === link.href ? 'text-primary' : 'text-gray-400 hover:text-white'
-                                    }`}
+                <div className="md:hidden fixed inset-0 top-20 bg-background/80 backdrop-blur-md z-50 p-6 flex items-start justify-center">
+                    <div className="w-full max-w-md bg-card rounded-3xl p-8 shadow-2xl border border-primary/20">
+                        <div className="flex flex-col gap-6 text-center">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`text-lg font-medium py-2 transition-colors ${pathname === link.href ? 'text-primary' : 'text-white hover:text-primary'
+                                        }`}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </div>
+
+                        <div className="flex flex-col gap-3 mt-8">
+                            <a
+                                href="https://app.funded-master.com/checkoutpage"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                {link.label}
-                            </Link>
-                        ))}
+                                <button className="w-full py-3 px-6 rounded-full border-2 border-primary/30 text-white font-semibold hover:border-primary hover:text-primary transition-all">
+                                    Log in
+                                </button>
+                            </a>
+                            <a
+                                href="https://dashboard.sharkfunded.com/checkoutpage"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button className="w-full py-3 px-6 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20">
+                                    Get Started
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://app.funded-master.com/checkoutpage" target="_blank" rel="noopener noreferrer" className="mt-4">
-                        <Button variant="primary" className="w-full font-semibold">
-                            Log in
-                        </Button>
-                    </a>
                 </div>
             )}
         </nav>
