@@ -13,7 +13,7 @@ export function Navbar() {
 
     const navLinks = [
         { href: '/pricing', label: 'Pricing' },
-        { href: '/trading-rules', label: 'Trading Rules' },
+        { href: 'https://intercom.help/funded-master-7abfac9ee14d/en', label: 'Trading Rules' },
         { href: '/faq', label: 'FAQ' },
         { href: '/affiliates', label: 'Affiliates' },
     ];
